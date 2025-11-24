@@ -1,0 +1,37 @@
+{
+    "name": "com.thejoeman23.simpleinteractionsystem",
+    "version": "1.0.0",
+    "displayName": "Simple Interaction System",
+    "description": "A minimal, plug-and-play interaction system with Interactor + Interactable components. Includes 2D and 3D sample scenes.",
+  
+    "unity": "6000.0",
+    "unityRelease": "0f1",
+
+    "author": {
+        "name": "Jonathan Strong",
+        "url": "https://github.com/thejoeman23"
+    },
+
+    "keywords": [
+        "interaction",
+        "interact",
+        "interactable",
+        "character",
+        "system",
+        "gameplay",
+        "unity"
+    ],
+
+    "samples": [
+        {
+            "displayName": "3D Demo Scene",
+            "description": "A simple 3D interaction demo using a player and interactable cubes.",
+            "path": "Samples~/3D Demo"
+        },
+        {
+            "displayName": "2D Demo Scene",
+            "description": "A basic 2D demo that demonstrates the interaction workflow.",
+            "path": "Samples~/2D Demo"
+        }
+    ]
+}
