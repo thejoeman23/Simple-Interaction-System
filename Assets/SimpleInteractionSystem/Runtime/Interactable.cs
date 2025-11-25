@@ -9,8 +9,8 @@ namespace SimpleInteractionSystem
     [RequireComponent(typeof(Collider2D))]
     public class Interactable : MonoBehaviour, IInteractable
     {
-        [Header("Interaction Sprite")]
-        [SerializeField] private Sprite icon;
+        // [Header("Interaction Sprite")]
+        // [SerializeField] private Sprite icon;
         
         [Header("Interactable Settings")]
         [Tooltip("Whether this object can currently be interacted with.")]
