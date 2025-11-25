@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace SimpleInteractionSystem
 {
-    [AddComponentMenu("Interaction System/Interactor2D")]
+    [AddComponentMenu("Interaction System/Interactor3D")]
     public class Interactor3D : MonoBehaviour
     {
         [Header("Input")]
