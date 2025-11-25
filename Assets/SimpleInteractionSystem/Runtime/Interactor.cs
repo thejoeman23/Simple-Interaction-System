@@ -25,8 +25,9 @@ namespace SimpleInteractionSystem
         {
             UpdateNearestInteractable();
 
-            if (interactKey != null && interactKey.action.triggered && nearestInteractable != null)
+            if (interactKey != null && interactKey.action.IsPressed() && nearestInteractable != null)
             {
+                Debug.Log("Interacting with " + interactKey.action.name);
                 nearestInteractable.Interact();
             }
         }
@@ -34,12 +35,14 @@ namespace SimpleInteractionSystem
         protected virtual void UpdateNearestInteractable()
         {
             Vector3 spherePos = transform.position - new Vector3(0, transform.localScale.y / 2, 0);
-            Collider[] colliders = Physics.OverlapSphere(spherePos, interactRadius);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(spherePos, interactRadius);
+            
+            Debug.Log(colliders.Length);
 
             float nearestDist = Mathf.Infinity;
             Interactable found = null;
 
-            foreach (Collider col in colliders)
+            foreach (Collider2D col in colliders)
             {
                 if (col.TryGetComponent(out Interactable interactable) && interactable.CanInteract)
                 {
@@ -55,6 +58,7 @@ namespace SimpleInteractionSystem
 
             if (found != nearestInteractable)
             {
+                Debug.Log("Found One!");
                 nearestInteractable = found;
                 OnNearestInteractableChanged(found);
             }

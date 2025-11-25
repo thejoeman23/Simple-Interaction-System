@@ -5,7 +5,7 @@
     "description": "A minimal, plug-and-play interaction system with Interactor + Interactable components. Includes 2D and 3D sample scenes.",
   
     "unity": "6000.0",
-    "unityRelease": "0f1",
+    "unityRelease": "62f1",
 
     "author": {
         "name": "Jonathan Strong",
