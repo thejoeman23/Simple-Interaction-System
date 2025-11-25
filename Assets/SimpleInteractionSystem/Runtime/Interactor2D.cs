@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace SimpleInteractionSystem
 {
-    [AddComponentMenu("Interaction System/Interactor")]
-    public class Interactor : MonoBehaviour
+    [AddComponentMenu("Interaction System/Interactor2D")]
+    public class Interactor2D : MonoBehaviour
     {
         [Header("Input")]
         [Tooltip("Input Action used to trigger interactions (e.g. Player/Interact).")]
