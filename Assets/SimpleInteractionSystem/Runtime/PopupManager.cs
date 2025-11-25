@@ -57,7 +57,7 @@ namespace SimpleInteractionSystem
         protected virtual GameObject CreateInteractButton(Interactable interactable)
         {
             GameObject button = Instantiate(_interactButtonPrefab, transform.parent);
-            button.transform.position = interactable.transform.position + new Vector3(0, interactable.InteractPromptHeight + _heightOffset, 0);
+            button.transform.position = interactable.transform.position + new Vector3(0, interactable.InteractPromptHeight, 0);
             button.SetActive(false); // will be enabled by ChangeInteractableObject
             button.transform.localScale = Vector3.zero; // start hidden if animating
             return button;
