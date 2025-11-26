@@ -6,7 +6,6 @@ namespace SimpleInteractionSystem
     using UnityEngine.Events;
 
     [AddComponentMenu("Interaction System/Interactable")]
-    [RequireComponent(typeof(Collider2D))]
     public class Interactable : MonoBehaviour, IInteractable
     {
         // [Header("Interaction Sprite")]
