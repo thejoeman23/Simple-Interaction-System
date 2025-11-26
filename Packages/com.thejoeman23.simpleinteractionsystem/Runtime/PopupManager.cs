@@ -31,7 +31,7 @@ namespace SimpleInteractionSystem
             _originalButtonScale = _interactButtonPrefab.transform.localScale;
         }
 
-        public void ChangeInteractableObject(Interactable interactable)
+        public virtual void ChangeInteractableObject(Interactable interactable)
         {
             // If there is nothing to interact with then animate out/clear the interact button
             if (interactable == null)

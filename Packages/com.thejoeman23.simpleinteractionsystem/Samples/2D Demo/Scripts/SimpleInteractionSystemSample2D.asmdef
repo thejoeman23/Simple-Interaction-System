@@ -1,0 +1,7 @@
+{
+  "name": "SimpleInteractionSystemSample2D",
+  "references": [
+    "SimpleInteractionSystem",         
+    "Unity.InputSystem"                
+  ]
+}

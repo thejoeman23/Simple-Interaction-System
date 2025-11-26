@@ -337,7 +337,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3cb37207494bd2a76160e26c7fbe7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverAmplitude: 0.1
-  hoverFrequency: 0.3
+  hoverAmplitude: 0.3
+  hoverFrequency: 0.2
 --- !u!114 &1766196193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1766196194}
-        m_TargetAssemblyTypeName: SimpleInteractionSystem2DSample.ShakeItem, Assembly-CSharp
+        m_TargetAssemblyTypeName: SimpleInteractionSystem2DSample.ShakeItem, SimpleInteractionSystemSample2D
         m_MethodName: Shake
         m_Mode: 1
         m_Arguments:
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeDuration: 0.5
-  shakeStrength: 3
+  shakeStrength: 1
   shakeSpeed: 1
   scaleAmount: 1.2
 --- !u!65 &1766196195

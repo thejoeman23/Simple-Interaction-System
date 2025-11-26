@@ -37,7 +37,7 @@ namespace SimpleInteractionSystem
             gameObject.tag = "Interactable";
         }
 
-        public void Interact()
+        public virtual void Interact()
         {
             if (!canInteract) return;
 

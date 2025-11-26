@@ -1,0 +1,7 @@
+{
+  "name": "SimpleInteractionSystem",
+  "overrideReferences": true,
+  "references": [
+    "Unity.InputSystem"
+  ]
+}
