@@ -11,11 +11,6 @@ namespace SimpleInteractionSystem3DSample
         [SerializeField] private float speed = 5f;
         private Rigidbody _rigidbody;
 
-        private float yaw = 0f;
-        private float targetYaw = 0f;
-        // private float pitch = 0f;
-        // [SerializeField] private float maxPitch = 80f;
-
         void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
