@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.thejoeman23.simpleinteractionsystem": {
-      "version": "file:com.thejoeman23.simpleinteractionsystem",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.2d.animation": {
       "version": "13.0.2",
       "depth": 1,

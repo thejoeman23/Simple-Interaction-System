@@ -33,5 +33,9 @@
             "description": "A basic 2D demo that demonstrates the interaction workflow.",
             "path": "Samples~/2D Demo"
         }
-    ]
+    ],
+    
+    "dependencies": {
+        "com.unity.inputsystem": "1.17.0"
+    }
 }
