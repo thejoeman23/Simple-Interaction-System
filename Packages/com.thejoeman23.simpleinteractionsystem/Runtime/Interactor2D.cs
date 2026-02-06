@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,9 @@ namespace SimpleInteractionSystem
         [Tooltip("Draw the Gizmos for the interactable objects.")]
         [SerializeField] private bool showGizmos = true;
         [SerializeField] private Color gizmosColor = Color.white;
+        
+        [Header("Log Settings")]
+        [SerializeField] private bool showLogs = true;
 
         private Interactable nearestInteractable;
 
@@ -25,9 +29,9 @@ namespace SimpleInteractionSystem
         {
             UpdateNearestInteractable();
 
-            if (interactKey != null && interactKey.action.IsPressed() && nearestInteractable != null)
+            if (interactKey != null && interactKey.action.WasPressedThisFrame() && nearestInteractable != null)
             {
-                Debug.Log("Interacting with " + interactKey.action.name);
+                if (showLogs) Debug.Log("Interacting with " + interactKey.action.name);
                 nearestInteractable.Interact();
             }
         }
@@ -37,8 +41,6 @@ namespace SimpleInteractionSystem
             Vector3 spherePos = transform.position - new Vector3(0, transform.localScale.y / 2, 0);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(spherePos, interactRadius);
             
-            Debug.Log(colliders.Length);
-
             float nearestDist = Mathf.Infinity;
             Interactable found = null;
 
@@ -58,7 +60,7 @@ namespace SimpleInteractionSystem
 
             if (found != nearestInteractable)
             {
-                Debug.Log("Found One!");
+                if (showLogs) Debug.Log("Found One!");
                 nearestInteractable = found;
                 OnNearestInteractableChanged(found);
             }
@@ -69,7 +71,7 @@ namespace SimpleInteractionSystem
             if (PopupManager.Instance != null)
                 PopupManager.Instance.ChangeInteractableObject(nearestInteractable);
         }
-
+        
         private void OnDrawGizmosSelected()
         {
             if (!showGizmos)
